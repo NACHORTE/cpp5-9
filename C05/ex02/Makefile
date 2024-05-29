@@ -1,9 +1,14 @@
-NAME := #NAME
+NAME := AForm
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
-SRC := main.cpp
+SRC := RobotomyRequestForm.cpp\
+	main.cpp\
+	PresidentialPardonForm.cpp\
+	Bureaucrat.cpp\
+	AForm.cpp\
+	ShrubberyCreationForm.cpp
 
 OBJ := $(SRC:.cpp=.o)
 

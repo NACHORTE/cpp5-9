@@ -1,9 +1,11 @@
-NAME := #NAME
+NAME := Form
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
-SRC := main.cpp
+SRC := main.cpp\
+	Bureaucrat.cpp\
+	Form.cpp
 
 OBJ := $(SRC:.cpp=.o)
 
