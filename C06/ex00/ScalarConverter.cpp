@@ -15,7 +15,7 @@ std::ostream &operator<<(std::ostream &os, const ScalarConverter &obj)
 
 bool isChar(const std::string &str)
 {
-	if (str.length() == 1 && !isdigit(str[0]) && isprint(str[0]))
+	if (str.length() == 1 && !isdigit(str[0]))
 		return true;
 	return false;
 }
@@ -172,15 +172,6 @@ void convertDouble(const std::string &str)
 
 void ScalarConverter::convert(const std::string &str)
 {
-	/*if (isChar(str))
-		std::cout << "Is char\n";
-	else if (isInt(str))
-		std::cout << "Is int\n";
-	else if (isFloat(str))
-		std::cout << "Is float\n";
-	else if (isDouble(str))
-		std::cout << "Is double\n";*/
-
 	int type = getType(str);
 
 	switch (type)
