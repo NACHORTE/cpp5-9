@@ -18,6 +18,9 @@ class ScalarConverter
 	// Atributes
 
 	// Private member functions
+	ScalarConverter(void);
+	ScalarConverter(const ScalarConverter & src);
+	ScalarConverter & operator=(const ScalarConverter & rhs);
 
 };
 

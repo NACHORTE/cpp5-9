@@ -3,8 +3,26 @@
 #include <limits>
 #include <cmath>
 
-ScalarConverter::~ScalarConverter()
+
+
+ScalarConverter::ScalarConverter(void)
+{}
+
+ScalarConverter::ScalarConverter(const ScalarConverter & src)
 {
+	*this = src;
+}
+
+ScalarConverter::~ScalarConverter(void)
+{}
+
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &rhs)
+{
+	if (this != &rhs)
+	{
+		// copy
+	}
+	return (*this);
 }
 
 std::ostream &operator<<(std::ostream &os, const ScalarConverter &obj)
