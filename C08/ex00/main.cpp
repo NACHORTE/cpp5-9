@@ -69,17 +69,17 @@ int main()
 		std::string type = "list";
 		std::list<int> v;
 		v.push_back(-1234);
-		v.push_back(324);
-		v.push_back(563424);
+		v.push_back(334);
+		v.push_back(563434);
 		v.push_back(7564);
 		std::cout << "TESTING " << type ;
 		std::cout << " with content: " ;
 		printContainer(v);
 		test(v, -1234, type);
-		test(v, 324, type);
-		test(v, 563424, type);
+		test(v, 334, type);
+		test(v, 563434, type);
 		test(v, 7564, type);
-		test(v, -234, type);
+		test(v, -134, type);
 	}
 	return 0;
 }
