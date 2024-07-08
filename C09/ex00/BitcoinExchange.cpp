@@ -43,7 +43,7 @@ std::string trim(const std::string& str, const std::string & charset = " \t\n\r\
 {
     size_t first = str.find_first_not_of(charset);
     if (std::string::npos == first)
-        return str;
+        return std::string();
     size_t last = str.find_last_not_of(charset);
     return str.substr(first, (last - first + 1));
 }
@@ -134,6 +134,9 @@ int BitcoinExchange::readInput(const std::string &input)
 		std::string s_value;
 		float value;
 
+
+		if (trim(line).empty())
+			continue;
 		std::size_t pos = line.find("|");
 		if (pos == std::string::npos)
 		{
@@ -175,6 +178,10 @@ int BitcoinExchange::readInput(const std::string &input)
 					std::cout << key << " => " << value << " = " << value * it->second << std::endl;
 					break;
 				}
+			}
+			if (_data.rbegin()->first < key)
+			{
+				std::cout << key << " => " << value << " = " << value * _data.rbegin()->second << std::endl;
 			}
 		}
 		else
